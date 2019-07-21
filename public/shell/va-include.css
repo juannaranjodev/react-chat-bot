@@ -1,0 +1,288 @@
+/*****************************/
+/** STYLESHEET FOR DHS STUDENTS & TRAINEES VIRTUAL ASSISTANT **/
+/** Stylesheet required for any page that includes the Virtual Assistant. **/
+/** Note that any images used by this stylesheet should be found in the /images/ directory. **/
+/*****************************/
+
+/**
+/* Styling fixes required for older browsers.
+*/
+.va_clearfix {
+    /*zoom: 1;*/
+}
+
+/* For IE 6/7 */
+.va_clearfix:before,
+.va_clearfix:after {
+    content: "";
+    display: table;
+}
+
+.va_clearfix:after {
+    clear: both;
+}
+
+/**
+/* Virtual Assistant inclusion styles.
+*/
+.va_chatAnchor {
+    position: relative;
+    z-index: 999999;
+    bottom: 0;
+    right: 0;
+    min-width: 320px;
+    line-height: 1;
+    transition: 1s;
+    color: #FFFFFF;
+    display: block! important;
+}
+
+.va_iframe {
+    display: block;
+    height: 0;
+    width: 350px;
+    min-width: 320px;
+    position: fixed;
+    right: 50px;
+    bottom: 0;
+    border: none;
+    overflow: scroll;
+}
+
+/**
+/* Virtual Assistant desktop styles.
+*/
+.va_header {
+    max-height: 45px;
+    background: #777777;
+    background: -moz-linear-gradient(rgb(77, 77, 79), rgb(119, 119, 119));
+    background: -webkit-linear-gradient(#4D4D4F, #777777);
+    background: -o-linear-gradient(#4D4D4F, #777777);
+    background: -ms-linear-gradient(#4D4D4F, #777777); /*For IE10*/
+    background: linear-gradient(#4D4D4F, #777777);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#4D4D4F', endColorstr='#777777'); /*For IE7-8-9*/
+    color: #FFFFFF;
+    cursor: pointer;
+    position: relative;
+}
+
+.va_toggleIcon {
+    background: url(/shell/images/va_arrowup.png);
+    background-size: 20px 10px;
+    background-repeat: no-repeat;
+    padding-top: 10px;
+    position: absolute !important;
+    right: 0;
+    display: block;
+    background-position: center;
+    margin: 0;
+    top: 0;
+    height: 0 !important;
+    width: 0 !important;
+    margin: 0;
+    margin-right: 20px;
+    padding: 18.5px 15px;
+    margin-top: 3.5px;
+}
+
+.va_expanded {
+    background: url(/shell/images/va_arrowdown.png);
+    background-size: 20px 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.va_resizeIcon {
+    height: 0;
+    width: 0;
+    background: url(/shell/images/va_resizelarge.png);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute !important;
+    right: 45px;
+    bottom: 2px;
+    top: 0px;
+    display: block;
+    padding: 18.5px 15px;
+    margin-right: 12.5px;
+    margin-top: 3.5px;
+
+}
+
+.va_resizeIcon.va_large {
+    background: url(/shell/images/va_resizesmall.png);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.va_chatTitle {
+    line-height: 45px;
+    padding-left: 20px;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+#va_chatHeader {
+    position: fixed;
+    bottom: 0;
+    right: 50px;
+    width: 350px;
+    cursor: pointer;
+    box-shadow: 1px 1px 4px rgb(85, 85, 102);
+    border-radius: 5px;
+}
+
+.va_chatBorder {
+    height: 10px;
+    width: inherit;
+    border-radius: 5px 5px 0 0;
+    background: rgb(28, 120, 185);
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/**
+* Skip to Content link styles.
+*/
+.va_skipToLink {
+    display: none;
+}
+
+.va_skipToLink.active {
+    display: block !important;
+    z-index: 10;
+    position: absolute;
+    color: #000000;
+    background-color: #1C78B9;
+    padding: 5px;
+    font-weight: bold;
+    top: -1000px;
+    left: -1000px;
+    height: 0;
+    width: 0;
+    font-size: 0.875rem !important;
+    text-decoration: underline;
+}
+
+a.va_skipToLink:focus,
+a.va_skipToLink:active,
+a.va_skipToLink:hover {
+    left: 0;
+    top: 0;
+    height: inherit;
+    width: inherit;
+}
+
+.va_chatborder {
+    background: rgb(0,128,128);
+}
+
+.va_header {
+    height: 50px;
+    background: rgb(0,128,128);
+}
+
+#va_chatHeader .va_header:hover {
+    background: #002850;
+}
+
+
+/**
+/* Virtual Assistant mobile styles.
+*/
+@media screen and (max-width: 599px), screen and (max-height: 490px) {
+
+    .va_chatAnchor {
+        right: 0px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .va_header {
+        box-shadow: none;
+    }
+
+    .va_chatBorder {
+        display: block;
+    }
+
+    #va_mobileBar {
+        display: block;
+        position: fixed;
+        right: 50px;
+        bottom: 0;
+        width: 170px;
+        height: 45px;
+        background: #1e5399;
+        background: -moz-linear-gradient(#4D4D4F, #777777);
+        background: -webkit-linear-gradient(#4D4D4F, #777777);
+        background: -o-linear-gradient(#4D4D4F, #777777);
+        background: -ms-linear-gradient(#4D4D4F, #777777); /*For IE10*/
+        background: linear-gradient(#1e5399, #1e5399);
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#4D4D4F', endColorstr='#777777'); /*For IE7-8-9*/
+        border-radius: 5px 5px 0 0;
+        border-top: #1C78B9 5px solid;
+        color: #FFFFFF;
+        font-weight: normal;
+        font-size: 1.3rem;
+        padding-left: 10px;
+        line-height: 2.5;
+        /* Prevent font scaling in landscape while allowing user zoom */
+        -webkit-text-size-adjust: 100%;
+    }
+
+    .va_mobileLarge {
+        width: 100% !important;
+        top: 0;
+        left: 0;
+        border-radius: 0 !important;
+        padding-left: 20px !important;
+    }
+
+    #va_chatHeader {
+        display: block;
+    }
+
+    /* This style is applied to the chat arrow in mobile view when the chat is minimised. */
+    #va_mobileToggle.va_mobileToggle {
+        height: 80px !important;
+        width: 100%;
+        background: url(/shell/images/va_arrowup.png);
+        background-position: right 5px bottom 45px;
+        background-size: 20px 10px;
+        background-repeat: no-repeat;
+        position: absolute !important;
+        right: 0px;
+        bottom: -30px;
+        display: block;
+    }
+
+    /* This style is applied to the chat arrow in mobile view when the chat is open/maximised. */
+    #va_mobileToggle.va_mobileToggle.va_open {
+        height: 55px !important;
+        background: url(/shell/images/va_arrowdown.png);
+        background-repeat: no-repeat;
+        background-position: right 25px bottom 20px;
+        background-size: 20px 10px;
+        right: 17px;
+        left: initial;
+        bottom: -5px !important;
+    }
+
+    .va_chatTitle {
+        position: absolute;
+        bottom: -2px;
+        height: 0;
+        left: -20px;
+        font-size: 1rem;
+    }
+
+    /* Ensure the mobile slider doesn't overlap the footer content */
+    body {
+        padding-bottom: 40px;
+    }
+}
